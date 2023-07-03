@@ -38,7 +38,7 @@ export const router = createBrowserRouter([
       {
         path: 'ubicaciones/residentes',
         element: <ResidentesPage />,
-        loader: readLocations
+        loader: readLocations, readResidentsLocations
       }
     ]
   },

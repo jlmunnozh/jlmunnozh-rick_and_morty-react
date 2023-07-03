@@ -1,4 +1,4 @@
 export const readResidentsLocations = async () => {
-    const response = await fetch('https://rickandmortyapi.com/api/character/12');
+    const response = await fetch(`${link}`);
     return response.json();
 }

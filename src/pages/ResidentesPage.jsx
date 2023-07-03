@@ -16,7 +16,7 @@ const ResidentesPage = () => {
                 <div className="grid grid-cols-[repeat(auto-fit,_minmax(350px,_1fr))] gap-6">
                     {relation.residents.map((element) => {
                         return (
-                            <p className="rounded-2xl overflow-hidden flex flex-col h-full p-4 bg-sky-900 flex flex-col gap-2" key={element}><Link to={element}>{element}</Link></p>
+                            <p className="rounded-2xl overflow-hidden flex flex-col h-full p-4 bg-sky-900 flex flex-col gap-2 transition-colors hover:bg-amber-200 hover:text-sky-950" key={element}><Link to={element}>{element}</Link></p>
                         );
                     })}
                 </div>
