@@ -10,11 +10,14 @@ const ResidentesPage = () => {
 
     let i = 0;
 
+    console.log(resident.name)
+
     return (
 
         <section className="py-20">
-            <div className="container px-2 mx-auto flex flex-col gap-6">
-                <h1 className="text-teal-500 font-extrabold text-3xl text-center transition-colors hover:text-amber-200">Relación de Residentes</h1>
+            <div className="container px-2 mx-auto flex flex-col gap-4">
+                <h1 className="text-teal-500 font-bold text-3xl text-center transition-colors hover:text-amber-200">Relación de Residentes</h1>
+                <p className="text-amber-200 font-extrabold text-3xl text-center transition-colors hover:text-teal-500">.:: {resident.name} ::.</p>
                 <Link to={'/ubicaciones'} className="py-2 px-3 mt-auto rounded-2xl bg-teal-500 font-semibold self-start transition-colors hover:bg-amber-200 hover:text-sky-950">REGRESAR</Link>
                 {/* parte dos */}
                 <div className="grid grid-cols-[repeat(auto-fit,_minmax(350px,_1fr))] gap-6">
@@ -28,8 +31,8 @@ const ResidentesPage = () => {
                         React.useEffect(() => {
                             const dataResident = async () => {
                                 const response = await fetch(`${element}`);
-                                const users = await response.json()
-                                setHabitante(users)
+                                const habit = await response.json()
+                                setHabitante(habit)
                             }
                             dataResident();
                         }, [])
@@ -42,7 +45,7 @@ const ResidentesPage = () => {
                                 <h3 className="text-base">Especie: {habitante.species}</h3>
                                 <h4 className="text-base">Género: {habitante.gebder}</h4>
                                 <Link to={element} className="text-base">{element}</Link>
-                                <img src={habitante.image} alt={habitante.image} width={128} height={128} />
+                                <img src={habitante.image} alt={habitante.image} width={128} height={128} className="object-cover"/>
                             </div>
                         );
 
