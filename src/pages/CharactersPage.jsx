@@ -2,7 +2,7 @@ import { Link, useLoaderData } from "react-router-dom";
 
 const CharactersPage = () => {
   const data = useLoaderData();
-  // console.log(data);
+  console.log(data);
 
   return (
     <section className="py-20">

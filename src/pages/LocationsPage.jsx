@@ -18,9 +18,9 @@ const LocationsPage = () => {
                                 </Link>
                                 <h3 className="text-base font-semibold text-gray-200">Tipo: {type}</h3>
                                 <h4 className="text-base font-semibold text-gray-200">Dimensión: {dimension}</h4>
-                                <h5 className="text-base font-semibold text-gray-400">Creación: {created}</h5>
-                                {/* {residents.length === 0 ? <h6 className="mt-auto text-amber-500 text-base font-bold">NO hay residentes (0)</h6> : <Link to={'residentes'} className="py-1 px-3 mt-auto rounded-2xl bg-teal-500 font-semibold self-start transition-colors hover:bg-amber-200 hover:text-sky-950">Total de Residentes: {residents.length}</Link>} */}
-                                {residents.length === 0 ? <h6 className="mt-auto text-amber-500 text-base font-bold">NO hay residentes (0)</h6> : <Link to={{ pathname: 'residentes', search: `${id}`}} className="py-1 px-3 mt-auto rounded-2xl bg-teal-500 font-semibold self-start transition-colors hover:bg-amber-200 hover:text-sky-950">Total de Residentes: {residents.length}</Link>}
+                                <h5 className="text-base font-semibold text-gray-400">Creación: {created}</h5>                              
+                                {residents.length === 0 ? <h6 className="mt-auto text-amber-500 text-base font-bold">NO hay residentes (0)</h6> : <Link to={`residentes/${id}`} className="py-1 px-3 mt-auto rounded-2xl bg-teal-500 font-semibold self-start transition-colors hover:bg-amber-200 hover:text-sky-950">Total de Residentes: {residents.length}</Link>}
+
                             </div>
                         )
                     })}

@@ -6,7 +6,6 @@ import NotFoundPage from "../pages/NotFoundPage";
 import { readCharacters } from "../services/charactersService";
 import LocationsPage from "../pages/LocationsPage";
 import { readLocations } from "../services/locationsService";
-import { readResidentsLocations } from "../services/residentsLocationsService";
 import EpisodesPage from "../pages/EpisodesPage";
 import ResidentesPage from "../pages/ResidentesPage";
 
@@ -32,13 +31,12 @@ export const router = createBrowserRouter([
       },
       {
         path: 'episodios',
-        element: <EpisodesPage />,
-        loader: readResidentsLocations
+        element: <EpisodesPage />,        
       },
       {
-        path: 'ubicaciones/residentes',
+        path: 'ubicaciones/residentes/:id',
         element: <ResidentesPage />,
-        loader: readLocations, readResidentsLocations
+        loader: readLocations, 
       }
     ]
   },
