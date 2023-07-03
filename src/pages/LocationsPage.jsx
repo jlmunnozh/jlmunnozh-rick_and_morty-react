@@ -5,7 +5,7 @@ function LocationsPage() {
     const dataLocations = useLoaderData();
 
     return (
-        <section className="py-20 imagen_fondo">
+        <section className="py-20">
             <div className="container px-2 mx-auto flex flex-col gap-6">
                 <h1 className="py-2 text-teal-500 font-extrabold text-3xl text-center transition-colors hover:text-amber-200">Ubicaciones</h1>
                 <div className="grid grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] gap-6">
